@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfume Formulation</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .note-section {
+      margin-bottom: 20px;
+    }
+    .slider {
+      width: 100%;
+    }
+    .preview {
+      background-color: #f9f9f9;
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-center">Perfume Formulation</h1>
+    <button id="theme-toggle" class="btn btn-secondary float-end">Toggle Theme</button>
+
+    <!-- Top Notes -->
+    <div class="note-section">
+      <h3>Top Notes</h3>
+      <select id="top-note" class="form-select">
+        <option value="">Select a Note</option>
+        <option value="Bergamot">Bergamot</option>
+        <option value="Lemon">Lemon</option>
+        <option value="Lavender">Lavender</option>
+      </select>
+      <input type="range" id="top-slider" class="slider" min="0" max="100" value="50">
+      <span id="top-value">50%</span>
+    </div>
+
+    <!-- Middle Notes -->
+    <div class="note-section">
+      <h3>Middle Notes</h3>
+      <select id="middle-note" class="form-select">
+        <option value="">Select a Note</option>
+        <option value="Rose">Rose</option>
+        <option value="Jasmine">Jasmine</option>
+        <option value="Ylang-Ylang">Ylang-Ylang</option>
+      </select>
+      <input type="range" id="middle-slider" class="slider" min="0" max="100" value="50">
+      <span id="middle-value">50%</span>
+    </div>
+
+    <!-- Base Notes -->
+    <div class="note-section">
+      <h3>Base Notes</h3>
+      <select id="base-note" class="form-select">
+        <option value="">Select a Note</option>
+        <option value="Vanilla">Vanilla</option>
+        <option value="Sandalwood">Sandalwood</option>
+        <option value="Patchouli">Patchouli</option>
+      </select>
+      <input type="range" id="base-slider" class="slider" min="0" max="100" value="50">
+      <span id="base-value">50%</span>
+    </div>
+
+    <!-- Preview -->
+    <div class="preview">
+      <h4>Preview</h4>
+      <p><strong>Top:</strong> <span id="preview-top">None</span></p>
+      <p><strong>Middle:</strong> <span id="preview-middle">None</span></p>
+      <p><strong>Base:</strong> <span id="preview-base">None</span></p>
+    </div>
+
+    <!-- Buttons -->
+    <button id="save-btn" class="btn btn-primary">Save</button>
+    <button id="export-btn" class="btn btn-success">Export</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
